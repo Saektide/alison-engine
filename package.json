@@ -1,0 +1,24 @@
+{
+  "name": "alison_server",
+  "version": "0.0.1",
+  "description": "Back-end engine for ALISON servers.",
+  "main": "./src/index.js",
+  "author": "Saektide",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "chalk": "^5.1.2",
+    "dotenv": "^16.0.3",
+    "eventemitter3": "^4.0.7",
+    "h3": "^0.7.21",
+    "nodemon": "^2.0.20"
+  },
+  "scripts": {
+    "start": "node ./app/index.js",
+    "dev": "nodemon ."
+  },
+  "type": "module",
+  "devDependencies": {
+    "eslint": "^8.25.0"
+  }
+}
