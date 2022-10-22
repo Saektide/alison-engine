@@ -5,7 +5,6 @@
   "main": "./src/index.js",
   "author": "Saektide",
   "license": "MIT",
-  "private": true,
   "dependencies": {
     "chalk": "^5.1.2",
     "dotenv": "^16.0.3",
