@@ -16,5 +16,12 @@
   "type": "module",
   "devDependencies": {
     "eslint": "^8.25.0"
+  },
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Saektide/alison-engine"
   }
 }
