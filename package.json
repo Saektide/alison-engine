@@ -7,18 +7,17 @@
   "license": "MIT",
   "dependencies": {
     "chalk": "^5.1.2",
-    "dotenv": "^16.0.3",
     "eventemitter3": "^4.0.7",
-    "h3": "^0.8.5",
-    "nodemon": "^2.0.20"
+    "h3": "^0.8.5"
   },
   "scripts": {},
   "type": "module",
   "devDependencies": {
+    "dotenv": "^16.0.3",
     "eslint": "^8.25.0"
   },
   "publishConfig": {
-    "registry":"https://npm.pkg.github.com"
+    "registry": "https://npm.pkg.github.com"
   },
   "repository": {
     "type": "git",
