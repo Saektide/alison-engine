@@ -49,7 +49,8 @@ export default class AlisonEngine {
     Object.keys(routes).forEach((pathName) => {
       const pathMethods = Object.keys(routes[pathName])
       pathMethods.forEach((methodName) => {
-        this.router.instance[methodName](pathName, routes[pathName][methodName])
+        const routeHandler = routes[pathName][methodName]
+        this.router.instance.add(pathName, routeHandler, methodName)
       })
     })
     this.app.use(this.router.instance)

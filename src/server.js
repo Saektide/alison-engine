@@ -1,4 +1,5 @@
 import { createServer } from 'http'
+import { toNodeListener } from 'h3'
 import { validatePort } from './util/validate.js'
 
 export default class AlisonServerInstance {
@@ -11,7 +12,7 @@ export default class AlisonServerInstance {
   listen(engine) {
     const port = this.port
     const { logger, events, app } = engine
-    createServer(app)
+    createServer(toNodeListener(app))
       .listen(port)
       .on('listening', () => {
         logger.info('Server listening port', port)

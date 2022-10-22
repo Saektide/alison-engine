@@ -1,4 +1,4 @@
-import { createRouter, readBody } from 'h3'
+import { createRouter,  fromNodeMiddleware, readBody } from 'h3'
 import Logger from './logger.js'
 import { validateRequestMethod } from './validate.js'
 import fs from 'fs'
@@ -31,7 +31,7 @@ export default class Router {
         routeKeys.forEach((methodKey) => {
           if (!validateRequestMethod(methodKey, true)) return;
           this.log.debug(methodKey.toUpperCase(), 'method discovered at', file.normalized, 'module.')
-          routesToExport[routePath][methodKey] = async (request, response) => {
+          routesToExport[routePath][methodKey] = fromNodeMiddleware(async (request, response) => {
             const routeLogger = new Logger(`route(${file.normalized})`)
             this._engine.events.emit('beforeRequest', { path: file.normalized, method: methodKey })
             const methodFunctionObject = {
@@ -40,11 +40,13 @@ export default class Router {
               engine: this._engine,
               logger: routeLogger
             }
-            methodFunctionObject.body = await readBody(request)
+            if (methodKey.toLowerCase() !== 'get') {
+              methodFunctionObject.body = await readBody(request)
+            }
             const result = await routeModule[methodKey](methodFunctionObject)
             this._engine.events.emit('afterRequest', { path: file.normalized, method: methodKey })
             return result
-          }
+          })
         })
         this.log.debug('"' + file.normalized + '" added.')
       })

@@ -40,3 +40,6 @@ coverage/
 # Cache
 .prettiercache
 .eslintcache
+
+# Testing directory
+testing/

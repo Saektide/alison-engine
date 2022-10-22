@@ -28,6 +28,6 @@ export function validateRequestMethod(requestMethod, shouldThrowError = true) {
     throwType('Request method is not valid, expected String but got', typeof requestMethod)
     return
   }
-  const validMethods = ['GET', 'POST', 'PUT', 'PATCH', 'DELETE']
+  const validMethods = ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'HEAD']
   return validMethods.includes(requestMethod.toUpperCase())
 }
