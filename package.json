@@ -1,7 +1,7 @@
 {
-  "name": "alison_server",
+  "name": "alison-engine",
   "version": "0.0.1",
-  "description": "Back-end engine for ALISON servers.",
+  "description": "A minimal Node HTTP server engine.",
   "main": "./src/index.js",
   "author": "Saektide",
   "license": "MIT",
@@ -13,10 +13,7 @@
     "h3": "^0.8.5",
     "nodemon": "^2.0.20"
   },
-  "scripts": {
-    "start": "node ./app/index.js",
-    "dev": "nodemon ."
-  },
+  "scripts": {},
   "type": "module",
   "devDependencies": {
     "eslint": "^8.25.0"
