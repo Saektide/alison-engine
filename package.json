@@ -1,6 +1,6 @@
 {
   "name": "@saektide/alison-engine",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A minimal Node HTTP server engine.",
   "main": "./src/index.js",
   "author": "saektide",
