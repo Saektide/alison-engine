@@ -1,9 +1,9 @@
 {
-  "name": "alison-engine",
+  "name": "@saektide/alison-engine",
   "version": "0.0.1",
   "description": "A minimal Node HTTP server engine.",
   "main": "./src/index.js",
-  "author": "Saektide",
+  "author": "saektide",
   "license": "MIT",
   "dependencies": {
     "chalk": "^5.1.2",
