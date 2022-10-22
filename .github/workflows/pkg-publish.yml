@@ -16,7 +16,7 @@ jobs:
         with:
           node-version: '16.x'
           always-auth: true
-          registry-url: https://registry.npmjs.org/
+          registry-url: https://npm.pkg.github.com
       - run: npm ci
       - run: npm publish
         env:
