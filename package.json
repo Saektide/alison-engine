@@ -1,6 +1,6 @@
 {
   "name": "alison-engine",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A minimal Node HTTP server engine.",
   "main": "./src/index.js",
   "author": "saektide",
@@ -8,12 +8,12 @@
   "dependencies": {
     "chalk": "^5.1.2",
     "eventemitter3": "^4.0.7",
-    "h3": "^0.8.5"
+    "h3": "^0.8.5",
+    "dotenv": "^16.0.3"
   },
   "scripts": {},
   "type": "module",
   "devDependencies": {
-    "dotenv": "^16.0.3",
     "eslint": "^8.25.0"
   },
   "repository": {
